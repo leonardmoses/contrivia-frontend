@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import New from "./New";
-import NewLink from "./NewLink";
 
 function Header(props) {
     return (
@@ -12,6 +11,9 @@ function Header(props) {
             </Link>
             <Link to="/new">
                 <div>new</div>
+            </Link>
+            <Link to="/edit">
+                <div>Edit</div>
             </Link>
         </nav>
     );
