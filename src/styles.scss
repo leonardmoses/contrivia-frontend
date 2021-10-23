@@ -1,6 +1,4 @@
-// --------------------------
-// VARIABLES
-// --------------------------
+/*#region Variables*/
 $darkcolor: rgb(38, 38, 38);
 $lightcolor: rgb(223, 244, 225);
 $lavender1: #544c64;
@@ -42,9 +40,9 @@ $pink1: #e7afdc;
 }
 
 
-// --------------------------
-// html
-// --------------------------
+/*#endregion Variables*/
+
+/*#region html*/
 
 html {
     height:100%;
@@ -67,9 +65,9 @@ body {
     background-size: cover;
 }
 
-// --------------------------
-// Header
-// --------------------------
+/*#endregion html*/
+
+/*#region Header*/
 
 nav {
     @include light-on-dark;
@@ -114,9 +112,9 @@ nav {
   
   }
 
-// --------------------------
-// Splash
-// --------------------------
+/*#endregion Header*/
+
+/*#region Splash*/
 
 .Splash {
     position: absolute;
@@ -156,9 +154,59 @@ nav {
     
 }
 
-// --------------------------
-// Form
-// --------------------------
+/*#endregion Splash*/
+
+/*#region Category*/
+.Category {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .Categoryh1 {
+    width: 100%;
+    // background-color: green;
+    margin-bottom: 5%;
+
+    h1 {
+      text-align: center;
+      font-size: x-large;
+    }
+  }
+
+  .catListBox {
+    width: 100%;
+    
+    // background-color: blueviolet;
+
+    .catList {
+      margin: 0 auto;
+      // background-color: hotpink;
+      border: 1px black solid;
+      border-radius: 10px;
+      width: 40%;
+      box-shadow: 0px 0px 50px 1px #e7afdc;
+      
+
+      h2 {
+        font-size: larger;
+      }
+
+    }
+  }
+}
+
+/*#endregion Category*/
+
+/*#region New*/
+
+.New {
+  text-align: center;
+}
+
+/*#endregion New*/
+
+/*#region Form*/
 
 section,
 div {
@@ -176,9 +224,9 @@ div {
   }
 }
 
-// --------------------------
-// button
-// --------------------------
+/*#endregion Form*/
+
+/*#region button*/
 
 button#delete {
   @include light-on-dark;
@@ -188,9 +236,9 @@ button#delete {
   padding: 10px;
 }
 
-// --------------------------
-// images
-// --------------------------
+/*#endregion button*/
+
+/*#region image*/
 
 img {
   width: 300px;
@@ -198,3 +246,5 @@ img {
   border-radius: 90px;
   object-fit: cover;
 }
+
+/*#endregion image*/

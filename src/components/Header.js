@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import New from "./New";
 
 function Header(props) {
     return (
@@ -8,6 +7,7 @@ function Header(props) {
             <h1>Contrivia</h1>
             <ul>
                 <li><Link to="/main"><button>Main</button></Link></li>
+                <li><Link to="/category"><button>Category</button></Link></li>
                 <li><Link to="/new"><button>New</button></Link></li>
                 <li><Link to="/edit"><button>Edit</button></Link></li>
             </ul>

@@ -43,7 +43,7 @@ function New(props) {
     };
 
     return (
-        <div>
+        <div className="New">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

@@ -7,7 +7,7 @@ function Splash() {
     return (
         <div className="Splash">
             <h1>Welcome to ConTriva</h1>
-            <h2>an app where you can create your own trivia.</h2>
+            <h2>where you can create your own trivia.</h2>
             <Link to="/home">
                 <button className="button">Lets Begin</button>
             </Link>

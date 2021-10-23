@@ -6,6 +6,7 @@ import Main from "../components/Main";
 import New from "../components/New";
 import Splash from "./Splash";
 import EditCategory from "../components/EditCategory";
+import Category from "../components/Category";
 
 function Home() {
 
@@ -59,7 +60,9 @@ function Home() {
                 <Route path="/new">
                     <New category={category} createCategory={createCategory} />
                 </Route>
-
+                <Route path="/category">
+                    <Category category={category} />
+                </Route>
             </Switch>
         </div>
     )
