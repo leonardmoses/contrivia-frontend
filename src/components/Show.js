@@ -10,7 +10,7 @@ function Show(props) {
 
     return (
         <div className="catName">
-            <h1>{catName.name}</h1>
+            <h1>{catName.catName}</h1>
 
         </div>
     )

@@ -5,9 +5,12 @@ import Home from "./Home";
 
 function Splash() {
     return (
-        <div>
-            <h1>Welcome To Contrivia</h1>
-            <Link to="/home">Home</Link>
+        <div className="Splash">
+            <h1>Welcome to ConTriva</h1>
+            <h2>an app where you can create your own trivia.</h2>
+            <Link to="/home">
+                <button className="button">Lets Begin</button>
+            </Link>
             <Switch>
                 <Route path="/home">
                     <Home />

@@ -1,0 +1,200 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+$darkcolor: rgb(38, 38, 38);
+$lightcolor: rgb(223, 244, 225);
+$lavender1: #544c64;
+$lavender2: #68607c;
+$lavender3: #84749c;
+$lavender4: #b3bdd6;
+$cyan1: #64bbce;
+$cyan2: #86c1ce;
+$cyan3: #42bec8;
+$green1: #87d6a2;
+$green2: #8be6b6;
+$pink1: #e7afdc;
+
+@mixin light-on-dark {
+  color: $lightcolor;
+  background-color: $darkcolor;
+}
+
+@mixin dark-on-light {
+  color: $darkcolor;
+  background-color: $lightcolor;
+}
+
+@mixin combo1 {
+    background-color: darkgoldenrod;
+    background-image: linear-gradient(45deg, $lavender1, $pink1);
+    background-clip: text;
+    /* background-size: 100%; */
+    /* background-repeat: repeat; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+@mixin gradient1 {
+    background-image: linear-gradient(green,blue)
+
+}
+
+
+// --------------------------
+// html
+// --------------------------
+
+html {
+    height:100%;
+    background: linear-gradient(217deg, $green1, rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, $pink1, rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, $lavender4, rgba(0,0,255,0) 70.71%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 ,h2 {
+        font-family: 'Gruppo', cursive;
+    }
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(336deg, $green1, rgba(255,0,0,0) 40.71%),
+    linear-gradient(217deg, $pink1, rgba(0,255,0,0) 40.71%),
+    linear-gradient(127deg, $lavender4, rgba(0,0,255,0) 30.71%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// --------------------------
+// Header
+// --------------------------
+
+nav {
+    @include light-on-dark;
+    width: 100%;
+    display: flex;
+    // justify-content: flex-start;
+    contain: content;
+
+    
+  
+    h1 {
+        // @include combo1;
+        font-size: xx-large;
+        text-align: center;
+        // background-color: blue;
+    }
+
+    ul {
+        float: right;
+        display: flex;
+        
+        li {
+            display: block;
+            // background-color: red;
+            
+            button {
+                background-color: #b3bdd600;
+                border: 0.5px solid #e7e7e719;
+                color: $lavender2;
+                margin: 0 6px;
+                padding: 2px 15px ;
+                transition-duration: 0.2s;
+            }
+            :hover{
+                color:$lavender4;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+  
+  }
+
+// --------------------------
+// Splash
+// --------------------------
+
+.Splash {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+
+    h1 {
+        font-size: 200%;
+        font-weight:bolder;
+        color: $lavender3;
+    }
+    h2 {
+        font-size: 130%;
+        font-style: oblique;
+        font-weight: bolder;
+        color: white;
+        filter: drop-shadow(0 0 0.50rem $lavender1);
+    }
+
+    button {
+
+        margin-top: 2%;
+        padding: 5px 20px;
+        cursor: pointer;
+        border: 1px solid $lavender4;
+        border-radius: 10px;
+        background-color: $lightcolor;
+        color: $lavender3;
+        transition-duration: 0.2s;
+    }
+
+    button:hover {
+        background-color: $darkcolor;
+        color: $cyan3;
+    }
+    
+}
+
+// --------------------------
+// Form
+// --------------------------
+
+section,
+div {
+  form {
+    input {
+      @include light-on-dark;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+
+      &[type="submit"]:hover {
+        @include dark-on-light;
+      }
+    }
+  }
+}
+
+// --------------------------
+// button
+// --------------------------
+
+button#delete {
+  @include light-on-dark;
+  display: block;
+  margin: auto;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+// --------------------------
+// images
+// --------------------------
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  object-fit: cover;
+}

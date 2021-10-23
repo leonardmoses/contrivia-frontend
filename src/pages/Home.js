@@ -5,12 +5,12 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import New from "../components/New";
 import Splash from "./Splash";
-import Edit from "../components/EditCategory";
+import EditCategory from "../components/EditCategory";
 
 function Home() {
 
     // create state to hold category data
-    const [category, setCategory] = useState(null);
+    const [category, setCategory] = useState();
 
     // create a var URL to be passed into when making API call
     const URL = "https://contrivia-backend.herokuapp.com/";
@@ -41,6 +41,8 @@ function Home() {
         getCategory();
     };
 
+
+
     // make an initial call for the data inside a useEffect, so it only happens once on component load. [] means run once. 
     useEffect(() => getCategory(), []);
 
@@ -56,9 +58,6 @@ function Home() {
                 </Route>
                 <Route path="/new">
                     <New category={category} createCategory={createCategory} />
-                </Route>
-                <Route path="/edit">
-                    <Edit />
                 </Route>
 
             </Switch>

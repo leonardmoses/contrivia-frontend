@@ -8,6 +8,8 @@ function New(props) {
     // state to hold formData
     const [newForm, setNewForm] = useState({
         catName: "",
+        question: "",
+        answer: ""
     });
 
     // handleChange function for form
@@ -20,7 +22,9 @@ function New(props) {
         event.preventDefault();
         props.createCategory(newForm);
         setNewForm({
-            catName: ""
+            catName: "",
+            question: "",
+            answer: ""
         });
     };
 
@@ -29,6 +33,7 @@ function New(props) {
         return props.category.map((element) => (
             <div key={element._id} className="element">
                 <h1>{element.catName}</h1>
+
             </div>
         ));
     };
@@ -42,9 +47,20 @@ function New(props) {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
- 
                     name="catName"
                     placeholder="Name New Category"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="question"
+                    placeholder="Enter the Question"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="answer"
+                    placeholder="Enter the Answer"
                     onChange={handleChange}
                 />
                 <input type="submit" value="Create" />
