@@ -9,7 +9,8 @@ function New(props) {
     const [newForm, setNewForm] = useState({
         catName: "",
         question: "",
-        answer: ""
+        answer: "",
+        difficulty: "1",
     });
 
     // handleChange function for form
@@ -42,28 +43,41 @@ function New(props) {
 
     return (
         <div className="New">
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="catName"
-                    placeholder="Name New Category"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    name="question"
-                    placeholder="Enter the Question"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    name="answer"
-                    placeholder="Enter the Answer"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Create" />
-            </form>
-
+            <div className="formDiv">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        className="field"
+                        type="text"
+                        name="catName"
+                        placeholder="Name New Category"
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="field"
+                        type="text"
+                        name="question"
+                        placeholder="Enter the Question"
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="field"
+                        type="text"
+                        name="answer"
+                        placeholder="Enter the Answer"
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="field"
+                        type="number"
+                        name="difficulty"
+                        placeholder="Difficulty (1-5)"
+                        min="1"
+                        max="5"
+                        onChange={handleChange}
+                    />
+                    <input className="submit" type="submit" value="Create" />
+                </form>
+            </div>
             <div className="Category">
                 <div className="Categoryh1">
                     <h1>List of existing Categories</h1>

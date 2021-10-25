@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
-
-function EditCategory(props) {
+function CategoryShow(props) {
 
     const id = props.match.params.id;
     const category = props.category;
     const catId = category.find(p => p._id === id);
+    const eyeD = catId._id;
 
     // state for form
     // const [editForm, setEditForm] = useState(catId);
@@ -75,43 +76,19 @@ function EditCategory(props) {
     // };
     //#endregion
 
+    const toCatEdit = () => {
+        return (
+
+            <div className="button" id="editButton">
+                <Link to={`/category/${catId._id}/edit`}><button>Edit Questions</button></Link>
+            </div>
+        )
+    };
+
+
     return (
         <div className="EditCat">
-            <form className="form" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={formData.catName}
-                    name="catName"
-                    placeholder="Update Category Name"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={formData.question}
-                    name="question"
-                    placeholder="question"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={formData.answer}
-                    name="answer"
-                    placeholder="answer"
-                    onChange={handleChange}
-                />
-                <input
-                    type="number"
-                    value={formData.difficulty}
-                    min="1"
-                    max="5"
-                    name="difficulty"
-                    placeholder="difficulty"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Update" />
-            </form>
-
-            <button className="button" id="deleteButton" onClick={removeCategory}>DELETE</button>
+            <div className="editButton">{toCatEdit()}</div>
             <div className="catId">
                 <div className="catName">
                     <h1>{catId.catName}</h1>
@@ -127,5 +104,5 @@ function EditCategory(props) {
     )
 }
 
-export default EditCategory;
+export default CategoryShow;
 

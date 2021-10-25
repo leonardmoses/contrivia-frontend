@@ -7,10 +7,8 @@ function Header(props) {
         <nav className="nav">
             <h1>Contrivia</h1>
             <ul>
-                <li><Link to="/main"><button>Main</button></Link></li>
                 <li><Link to="/category"><button>Category</button></Link></li>
                 <li><Link to="/new"><button>New</button></Link></li>
-                <li><Link to="/edit"><button>Edit</button></Link></li>
             </ul>
         </nav>
     );

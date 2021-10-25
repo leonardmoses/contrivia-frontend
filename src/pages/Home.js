@@ -7,6 +7,7 @@ import New from "../components/New";
 import Splash from "./Splash";
 import EditCategory from "../components/EditCategory";
 import Category from "../components/Category";
+import CategoryShow from "../components/CategoryShow";
 
 function Home() {
 
@@ -93,7 +94,18 @@ function Home() {
                     )}
                 />
                 <Route
-                    path="/category/:id"
+                path="/category/:id/show"
+                render={(rp) => (
+                    <CategoryShow
+                    category={category}
+                    updateCategory={updateCategory}
+                    deleteCategory={deleteCategory}
+                    {...rp}
+                    />
+                )}
+            />
+                <Route
+                    path="/category/:id/edit"
                     render={(rp) => (
                         <EditCategory
                         category={category}

@@ -15,8 +15,9 @@ function Main(props) {
         return props.category.map((element) => (
             <div key={element._id} className="catName">
                 <h3>{element.catName}</h3>
-                <h3>{element.catInfo.question}</h3>
-                <h3>{element.catInfo.answer}</h3>
+                <h3>{element.question}</h3>
+                <h3>{element.answer}</h3>
+                <h3>{element.difficulty}</h3>
             </div>
         ));
     };

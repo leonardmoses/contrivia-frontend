@@ -14,8 +14,9 @@ function Category(props) {
     const loaded = () => {
         return props.category.map((element) => (
             <div key={element._id} className="catName">
-                <Link to={`/category/${element._id}`}><h2>{element.catName}</h2></Link>
+                <Link to={`/category/${element._id}/show`}><h2>{element.catName}</h2></Link>
             </div>
+
         ));
     };
 
