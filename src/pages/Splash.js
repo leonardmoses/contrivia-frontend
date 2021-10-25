@@ -8,14 +8,9 @@ function Splash() {
         <div className="Splash">
             <h1>Welcome to ConTriva</h1>
             <h2>where you can create your own trivia.</h2>
-            <Link to="/home">
+            <Link to="/category">
                 <button className="button">Lets Begin</button>
             </Link>
-            <Switch>
-                <Route path="/home">
-                    <Home />
-                </Route>
-            </Switch>
             
         </div>
     )

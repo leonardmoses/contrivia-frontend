@@ -223,6 +223,11 @@ nav {
 /*#region Edit Category*/
 .EditCat{
 
+    #deleteButton {
+      float: right;
+
+    }
+
   form {
     // background-color: #8be6b553;
     padding: 2% 0;
@@ -237,6 +242,8 @@ nav {
     // text-align: center;
     // background-color: blue;
     padding-top: 10%;
+
+
   
     .catName {
       width: 100%;
@@ -403,7 +410,7 @@ button#button {
 button {
   background-color: $darkcolor;
   color: $green2;
-  float: right;
+  // float: right;
 }
 
 /*#endregion button*/
