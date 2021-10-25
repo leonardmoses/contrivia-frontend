@@ -15,8 +15,8 @@ function Home() {
     const [category, setCategory] = useState();
 
     // create a var URL to be passed into when making API call
-    // const URL = "https://contrivia-backend.herokuapp.com/";
-    const URL = "http://localhost:4000/";
+    const URL = "https://contrivia-backend.herokuapp.com/";
+    // const URL = "http://localhost:4000/";
 
     // create function to make api call
     const getCategory = async () => {
