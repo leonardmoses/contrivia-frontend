@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function Category(props) {
 
@@ -13,7 +14,7 @@ function Category(props) {
     const loaded = () => {
         return props.category.map((element) => (
             <div key={element._id} className="catName">
-                <h2>{element.catName}</h2>
+                <Link to={`/category/${element._id}`}><h2>{element.catName}</h2></Link>
             </div>
         ));
     };
@@ -32,7 +33,6 @@ function Category(props) {
                     {props.category ? loaded() : loading()}
                 </div>
             </div>
-
         </div>
 
     )

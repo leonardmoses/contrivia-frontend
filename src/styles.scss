@@ -86,8 +86,9 @@ nav {
     }
 
     ul {
-        float: right;
+        // float: right;
         display: flex;
+        justify-content: center;
         
         li {
             display: block;
@@ -158,6 +159,7 @@ nav {
 
 /*#region Category*/
 .Category {
+  padding-top: 5%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -186,6 +188,12 @@ nav {
       border-radius: 10px;
       width: 40%;
       box-shadow: 0px 0px 50px 1px #e7afdc;
+
+      :hover {
+        background-color: $darkcolor;
+        color: $green2;
+
+      }
       
 
       h2 {
@@ -198,11 +206,116 @@ nav {
 
 /*#endregion Category*/
 
+/*#region Edit Category*/
+.EditCat{
+
+  form {
+    // background-color: #8be6b553;
+    border: 1px solid white;
+  }
+
+  #delete {
+    float: right;
+    // background-color: green;
+  }
+
+  .catId {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // text-align: center;
+    // background-color: blue;
+  
+    .catName {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      // background-color: green;
+      margin-bottom: 5%;
+      
+      h1{
+        margin: 0 auto;
+        text-align: center;
+        font-size: x-large;
+      }
+  
+    }
+
+    .question {
+      margin: 0 auto;
+      // background-color: hotpink;
+      border: 1px black solid;
+      border-radius: 10px;
+      width: 40%;
+      box-shadow: 0px 0px 50px 1px #e7afdc;
+
+      h2 {
+        padding: 0 0 0 5%;
+        text-align: left;
+      }
+    }
+  
+  }
+
+}
+
+/*#endregion Edit Category*/
+
 /*#region New*/
 
 .New {
   text-align: center;
+  padding-top: 2%;
+
+  .Category {
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  
+    .Categoryh1 {
+      width: 100%;
+      // background-color: green;
+      margin-bottom: 5%;
+  
+      h1 {
+        text-align: center;
+        font-size: x-large;
+      }
+    }
+  
+    .catListBox {
+      width: 100%;
+      
+      // background-color: blueviolet;
+  
+      .catList {
+        margin: 0 auto;
+        // background-color: hotpink;
+        border: 1px black solid;
+        border-radius: 10px;
+        width: 40%;
+        box-shadow: 0px 0px 50px 1px #0bab4b8e;
+  
+        :hover {
+          background-color: unset;
+          color: unset;
+  
+        }
+        
+  
+        h2 {
+          font-size: larger;
+        }
+  
+      }
+    }
+  }
+
 }
+
+
 
 /*#endregion New*/
 

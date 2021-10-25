@@ -14,7 +14,8 @@ function Home() {
     const [category, setCategory] = useState();
 
     // create a var URL to be passed into when making API call
-    const URL = "https://contrivia-backend.herokuapp.com/";
+    // const URL = "https://contrivia-backend.herokuapp.com/";
+    const URL = "http://localhost:4000/";
 
     // create function to make api call
     const getCategory = async () => {
@@ -27,7 +28,7 @@ function Home() {
     };
 
     //we need this function when we fill out a form. 
-    const createCategory = async (cat) => {
+    const createCategory = async (triviaCat) => {
         // make post request to create category
         await fetch(URL + 'trivia', {
             method: "POST",
@@ -36,13 +37,37 @@ function Home() {
                 "Content-Type": "Application/json",
             },
             //stringify will convert into json format
-            body: JSON.stringify(cat),
+            body: JSON.stringify(triviaCat),
         });
         // update list of category
         getCategory();
     };
 
+    // we need this function to update the data
+    const updateCategory = async (triviaCat, id) => {
+        // make put request to create category
+        await fetch(URL + "trivia/" + id, {
+            method: "PUT",
+            //so that it knows it's json data
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            //stringify will convert into json format
+            body: JSON.stringify(triviaCat),
+        });
+        // update list of category
+        getCategory();
+    }
 
+    // we need this to delete a triviaCat
+    const deleteCategory = async id => {
+        // make delete request to create category
+        await fetch(URL + "trivia/" + id, {
+            method: "DELETE",
+        })
+        // update list of category
+        getCategory();
+    }
 
     // make an initial call for the data inside a useEffect, so it only happens once on component load. [] means run once. 
     useEffect(() => getCategory(), []);
@@ -57,11 +82,29 @@ function Home() {
                 <Route path="/main">
                     <Main category={category} />
                 </Route>
-                <Route path="/new">
-                    <New category={category} createCategory={createCategory} />
-                </Route>
+                <Route
+                    path="/new"
+                    render={(rp) => (
+                        <New
+                        category={category}
+                        createCategory={createCategory}
+                        {...rp}
+                        />
+                    )}
+                />
+                <Route
+                    path="/category/:id"
+                    render={(rp) => (
+                        <EditCategory
+                        category={category}
+                        updateCategory={updateCategory}
+                        deleteCategory={deleteCategory}
+                        {...rp}
+                        />
+                    )}
+                />
                 <Route path="/category">
-                    <Category category={category} />
+                    <Category category={category}/>
                 </Route>
             </Switch>
         </div>

@@ -21,11 +21,7 @@ function New(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createCategory(newForm);
-        setNewForm({
-            catName: "",
-            question: "",
-            answer: ""
-        });
+        props.history.push("/category");
     };
 
     // loaded function
@@ -37,6 +33,8 @@ function New(props) {
             </div>
         ));
     };
+
+
 
     const loading = () => {
         return <h1>Loading...</h1>;
@@ -65,7 +63,17 @@ function New(props) {
                 />
                 <input type="submit" value="Create" />
             </form>
-            {props.category ? loaded() : loading()}
+
+            <div className="Category">
+                <div className="Categoryh1">
+                    <h1>List of existing Categories</h1>
+                </div>
+                <div className="catListBox">
+                    <div className="catList">
+                        {props.category ? loaded() : loading()}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
