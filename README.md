@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+## Title: **ConTrivia**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Description:**
+  A app where a user can create their own trivia categories with questions and answers. In its current state ConTrivia's purpose is to simply store the questions and answers. This app is made with React for a much more seamless feel when clicking between links.
 
-## Available Scripts
+**App Inspiration:**
+  I have found many occasions where I want to play a trivia game with others but can’t seem to find a category that suits us with appropriate difficulty. 
+  
+  In this app a user should be able to select an existing category or create a new category, then within that category add to the list of questions and answers that already exist if any. That’s all. They can then view the questions to be played in their own way. In this form the app performs CRUD opperations.
 
-In the project directory, you can run:
 
-### `npm start`
+**Technologies Used:**
+  HTML, SCSS (SASS), Javascript, Express, Mongoose, React, Heroku, Netflify.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Getting Started:**
+  1. To get started click on this link to go to the app's deployed domain.
+  https://contrivia.netlify.app/
+  2. The user is greeted with a splash page and can click the button to proceed.
+  3. If a category exists the user can select it to view the questions pertaining to it.
+  4. You can then view a list of questions, answer, and its difficulty level in that category
+  5. You can future click on Edit Questions if you want to modify any of the values.
+  6. Creating a new category with its question and answer can be done from the link in the nav. Otherwise click on the nav link (category) to see the full list again.
+  7. That is all
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  **Future Enhancement:**
+  1. Future goals will be to create some form of questionnaire so that the user can be asked the question themselves without being shown the answer until they reveal it with a button. 
+  2. Deleting a specific question as opposted to the entire category will also be a stretch goal. 
+  3. User authentication.
