@@ -29,7 +29,7 @@ function New(props) {
     const loaded = () => {
         return props.category.map((element) => (
             <div key={element._id} className="element">
-                <h1>{element.catName}</h1>
+                <h2>{element.catName}</h2>
 
             </div>
         ));
@@ -78,7 +78,7 @@ function New(props) {
                     <input className="submit" type="submit" value="Create" />
                 </form>
             </div>
-            <div className="Category">
+            <div className="CategoryNew">
                 <div className="Categoryh1">
                     <h1>List of existing Categories</h1>
                 </div>
